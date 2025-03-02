@@ -224,6 +224,42 @@ button:hover::before {
   box-shadow: 0 8px 20px rgba(248, 87, 166, 0.4);
 }
 
+/* Footer styling */
+.app-footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.app-footer:hover {
+  opacity: 1;
+}
+
+.app-footer a {
+  color: var(--light-color);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  font-weight: 600;
+}
+
+.app-footer a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--accent-gradient);
+  transition: width 0.3s ease;
+}
+
+.app-footer a:hover::after {
+  width: 100%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
   .container {
@@ -242,5 +278,10 @@ button:hover::before {
   
   h1 {
     font-size: 2rem;
+  }
+  
+  .app-footer {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
   }
 }
