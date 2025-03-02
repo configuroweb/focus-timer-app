@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Focus Timer App</title>
+
+		<!-- Style CSS -->
+		<link rel="stylesheet" href="./style.css">
+		<!-- Font Awesome for icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Focus Timer</h1>
+			<div class="timer">
+				<div class="circle">
+					<svg>
+						<defs>
+							<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+								<stop offset="0%" stop-color="#6C63FF" />
+								<stop offset="100%" stop-color="#F857A6" />
+							</linearGradient>
+						</defs>
+						<circle
+							cx="120"
+							cy="120"
+							r="90"
+						></circle>
+						<circle
+							class="progress"
+							cx="120"
+							cy="120"
+							r="90"
+						></circle>
+					</svg>
+					<div class="time-display">
+						<span id="minutes">25</span>:<span id="seconds">00</span>
+					</div>
+				</div>
+			</div>
+			<div class="controls">
+				<input
+					type="number"
+					id="time-input"
+					min="1"
+					max="60"
+					placeholder="Enter minutes (1-60)"
+				/>
+				<div class="buttons">
+					<button id="start-btn"><i class="fas fa-play"></i> Start</button>
+					<button id="pause-btn"><i class="fas fa-pause"></i> Pause</button>
+					<button id="reset-btn"><i class="fas fa-redo"></i> Reset</button>
+				</div>
+			</div>
+			<audio id="alert-sound" src="alert.mp3"></audio>
+		</div>
+
+		<!-- Script JS -->
+		<script src="./script.js"></script>
+	</body>
+</html>
